@@ -1,0 +1,13 @@
+if (LecturaAddress==0){
+	  for (int address=0;address<127;address++){
+		  HAL_Delay(50);
+		  if (LecturaAddress==0){
+	  HAL_I2C_Mem_Read_IT(&hi2c1, (address<<1), CHIPID,1,&ChipCheck,1);
+		  }
+		  else{
+			  Addressreal=address-1;
+			  address=200;
+		  }
+	  }
+    /* USER CODE BEGIN 3 */
+  }
